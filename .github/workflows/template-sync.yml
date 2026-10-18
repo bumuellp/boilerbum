@@ -13,7 +13,7 @@ permissions:
 jobs:
     sync:
         name: Sync with Upstream Template
-        if: github.repository != 'bumuellp/rebumlicate'
+        if: github.repository != 'bumuellp/boilerbum'
         runs-on: ubuntu-latest
         timeout-minutes: 15
         steps:
@@ -26,9 +26,9 @@ jobs:
             - name: Sync from Upstream Template
               uses: AndreasAugustin/actions-template-sync@6e1d0089686f8940604fc15baae62367bf6ee860 # v2.6.0
               with:
-                  source_repo_path: bumuellp/rebumlicate
+                  source_repo_path: bumuellp/boilerbum
                   upstream_branch: main
-                  pr_title: "chore(template): sync updates from upstream rebumlicate"
+                  pr_title: "chore(template): sync updates from upstream boilerbum"
                   pr_commit_msg: "chore(template): sync upstream changes"
                   pr_branch_name_prefix: template-sync
                   github_token: ${{ secrets.PAT_TEMPLATE_SYNC || secrets.GITHUB_TOKEN }}

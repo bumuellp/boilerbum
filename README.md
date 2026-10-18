@@ -1,6 +1,6 @@
-# rebumlicate
+# boilerbum
 
-[![CI](https://github.com/bumuellp/rebumlicate/actions/workflows/ci.yml/badge.svg)](https://github.com/bumuellp/rebumlicate/actions/workflows/ci.yml)
+[![CI](https://github.com/bumuellp/boilerbum/actions/workflows/ci.yml/badge.svg)](https://github.com/bumuellp/boilerbum/actions/workflows/ci.yml)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://github.com/bumuellp/.github)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -14,7 +14,7 @@ Opinionated starter template for new repositories under `@bumuellp`, featuring c
 - **Centralized Renovate**: Extends presets from [`bumuellp/.github:renovate-config`](https://github.com/bumuellp/.github) for vulnerability alerts, cooldown schedules, and grouped updates.
 - **Pre-Commit Quality Gates**: Validates formatting, commits, secrets, and security via [`bumuellp/cabumtain-hook`](https://github.com/bumuellp/cabumtain-hook), TruffleHog, and Prettier.
 - **Trivy Security Scanning**: Preconfigured [`trivy.yaml`](trivy.yaml) for vulnerability, secret, misconfiguration, and license scans.
-- **Automated Template Sync**: Downstream repositories automatically receive weekly PRs whenever `rebumlicate` updates via `actions-template-sync`.
+- **Automated Template Sync**: Downstream repositories automatically receive weekly PRs whenever `boilerbum` updates via `actions-template-sync`.
 - **Environment Consistency**: Normalized line endings (`.gitattributes`) and formatting standards (`.editorconfig`).
 
 ---
@@ -26,7 +26,7 @@ Opinionated starter template for new repositories under `@bumuellp`, featuring c
 Using the GitHub CLI:
 
 ```bash
-gh repo create my-new-repo --template bumuellp/rebumlicate --public --clone
+gh repo create my-new-repo --template bumuellp/boilerbum --public --clone
 ```
 
 Or click the **Use this template** button on GitHub.
