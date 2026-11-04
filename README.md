@@ -31,12 +31,20 @@ gh repo create my-new-repo --template bumuellp/boilerbum --public --clone
 
 Or click the **Use this template** button on GitHub.
 
-### 2. Set up local pre-commit hooks
+### 2. Configure code owners
+
+Create or update `.github/CODEOWNERS` with your GitHub handle so Renovate automatically assigns and requests reviews on dependency PRs:
+
+```bash
+echo "* @<your-github-handle>" > .github/CODEOWNERS
+```
+
+### 3. Set up local pre-commit hooks
 
 ```bash
 pre-commit install --hook-type pre-commit --hook-type commit-msg
 ```
 
-### 3. Exclude downstream files from template syncing
+### 4. Exclude downstream files from template syncing
 
 Add repository-specific files to [`.templatesyncignore`](.templatesyncignore) to prevent upstream template sync PRs from overwriting local modifications.
